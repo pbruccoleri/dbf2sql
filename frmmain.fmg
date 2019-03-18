@@ -1,0 +1,98 @@
+
+* ooHG IDE plus form generated code
+* (c)2004 Ciro Vargas Clemow   pcman2010@yahoo.com
+
+DEFINE WINDOW  TEMPLATE ; 
+AT 163,174 ;
+OBJ oWin ;
+ WIDTH 435 ;
+ HEIGHT 226 ; 
+ TITLE 'Utility for Conversion .DBF Files to Sql (Firebird 2)' ; 
+ ICON '' ; 
+MAIN ;
+NOSIZE ;
+FONT 'MS Sans Serif' ;
+SIZE 10 ;
+
+
+@ 43,30 LABEL label_1 ; 
+WIDTH 72 ; 
+HEIGHT 18 ; 
+VALUE 'File DBF' ; 
+FONT 'MS Sans Serif' ; 
+SIZE 10 ;
+
+
+
+
+frmmain.label_1.fontcolor:={0,0,0}
+
+@ 40,113 TEXTBOX archivodbf_txb ; 
+HEIGHT 24 ; 
+WIDTH 250 ; 
+Font 'MS Sans Serif' ; 
+size 10 ; 
+MAXLENGTH 200 ; 
+
+
+
+frmmain.archivodbf_txb.fontcolor:={0,0,0}
+frmmain.archivodbf_txb.backcolor:={255,255,255}
+
+@ 40,366 BUTTON buscararch_btn ; 
+PICTURE 'IMGBUSCAR';
+ACTION FindFile(oWin) ;
+WIDTH 24 ;
+HEIGHT 24 ; 
+
+
+
+
+@ 145,301 BUTTON cancel_btn ;
+CAPTION '&Cancel' ; 
+ACTION frmMain.Release ;
+WIDTH 100 ;
+HEIGHT 28 ; 
+FONT 'MS Sans Serif' ;
+SIZE 10 ;
+ 
+
+
+frmmain.cancel_btn.fontcolor:={0,0,0}
+
+@ 145,193 BUTTON convert_btn ;
+CAPTION 'Con&vert' ; 
+ACTION ConvertToSql(oWin) ;
+WIDTH 100 ;
+HEIGHT 28 ; 
+FONT 'MS Sans Serif' ;
+SIZE 10 ;
+ 
+
+
+frmmain.convert_btn.fontcolor:={0,0,0}
+
+@ 96,30 LABEL label_2 ; 
+WIDTH 374 ; 
+HEIGHT 37 ; 
+VALUE 'A text file with the same name is created but with extension sql in the same folder of the utilitary' ; 
+FONT 'MS Sans Serif' ; 
+
+
+
+
+frmmain.label_2.fontcolor:={0,0,0}
+
+@ 16,12 FRAME frame_1 ; 
+CAPTION "" ; 
+WIDTH 400 ; 
+HEIGHT 118 ; 
+
+
+
+frmmain.frame_1.fontcolor:={0,0,0}
+frmmain.frame_1.fontname:='MS Sans Serif'
+
+END WINDOW 
+
+
